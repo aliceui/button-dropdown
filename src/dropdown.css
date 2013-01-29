@@ -1,133 +1,50 @@
-/* alice.dropdown 样式模块 */
+.ui-button-dropdown {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
 
-@charset "utf-8";
-
-@import url('button');
-
-.ui-dbutton {
+.ui-button-dropdown-large,
+.ui-button-dropdown-middle,
+.ui-button-dropdown-small {
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0 0 4px #d9d9d9;
+    zoom: 1;
+    position: absolute;
+    left: 0;
+    width: 98%;
+    background: #fff;
+    margin: 0;
     padding: 0;
+    list-style: none;
+}
+.ui-button-dropdown-large {
+    top: 35px;
+    font-size: 14px;    
+}
+.ui-button-dropdown-middle {
+    top: 31px;
+    font-size: 14px;    
+}
+.ui-button-dropdown-small {
+    top: 25px;
+    font-size: 12px;
+}
+.ui-button-dropdown-item {
+    zoom: 1;
+    border-bottom: 1px solid #E6E6E6;    
+}
+.ui-button-dropdown-item a {
+    padding: 5px 10px;
+    display: block;
+    zoom: 1;
+    color: #08c;
+}
+.ui-button-dropdown-item a:hover {
+    background-color: #DFE9F2;
+    text-decoration:none;
 }
 
-.ui-dbutton-self,
-.ui-dbutton-arrow {
-    float: left;
-    font-weight: normal;
-    cursor: pointer;    
-}
-
-.ui-dbutton-self {
-    border-radius: 2px 0 0 2px;
-}
-
-.ui-dbutton-arrow {
-    border-radius: 0 2px 2px 0; 
-}
-
-/* 橙色 */
-
-.ui-dbutton-orange:hover {
-    border:1px solid #E5810E;
-    color:#fff;
-    background-color: #F5AA2B;    
-    background: -webkit-gradient(linear, left top, left bottom, from(#F5A620), to(#F09611));
-    background: -moz-linear-gradient(top, #F5A620, #F09611);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5A620', endColorstr='#F09611');
-    background:-o-linear-gradient(top, #F5A620, #F09611);
-    background: linear-gradient(top, #F5A620, #F09611);
-    box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.3) inset;
-}
-
-.ui-dbutton-orange .ui-dbutton-self:hover,
-.ui-dbutton-orange .ui-dbutton-arrow:hover {
-    background-color: #F5AA2B;
-    background: -webkit-gradient(linear, left top, left bottom, from(#F7B73B), to(#F4A626));
-    background: -moz-linear-gradient(top, #F7B73B, #F4A626);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7B73B', endColorstr='#F4A626');
-    background: -o-linear-gradient(top, #F7B73B, #F4A626);
-    background: linear-gradient(top, #F7B73B, #F4A626);
-    box-shadow: 0 -2px 2px rgba(255, 255, 255, 0.4) inset;
-}
-
-.ui-dbutton-orange .ui-dbutton-self {
-    border-right: 1px solid #EF8811;
-}
-
-.ui-dbutton-orange .ui-dbutton-arrow {
-    border-left: 1px solid #F6B533;
-    color: #fff;
-}
-
-/* 大橙色按钮 */
-
-.ui-button-lorange .ui-dbutton-self {
-    padding: 0 12px;
-}
-
-.ui-button-lorange .ui-dbutton-arrow {
-    width: 24px;
-}
-
-/* 中橙色按钮 */
-
-.ui-button-morange .ui-dbutton-self {
-    padding: 0 10px;
-}
-
-.ui-button-morange .ui-dbutton-arrow {
-    width: 20px;
-}
-
-/* 小橙色按钮 */
-
-.ui-button-sorange .ui-dbutton-self {
-    padding: 0 8px;
-}
-
-.ui-button-sorange .ui-dbutton-arrow {
-    width:18px;
-}
-
-/* 白色 */
-
-.ui-dbutton-white .ui-dbutton-arrow:hover {    
-    color: #666;
-}
-
-.ui-dbutton-white .ui-dbutton-self {
-    border-right: 1px solid #cdcdcd;
-}
-
-.ui-dbutton-white .ui-dbutton-arrow {
-    border-left: 1px solid #fff;
-    color: #999;
-}
-
-/* 大白色按钮 */
-
-.ui-button-lwhite .ui-dbutton-self {
-    padding: 0 12px;
-}
-
-.ui-button-lwhite .ui-dbutton-arrow {
-    width: 24px;
-}
-
-/* 中白色按钮 */
-
-.ui-button-mwhite .ui-dbutton-self {
-    padding: 0 10px;
-}
-
-.ui-button-mwhite .ui-dbutton-arrow {
-    width: 20px;
-}
-
-/* 小白色按钮 */
-
-.ui-button-swhite .ui-dbutton-self {
-    padding: 0 8px;
-}
-
-.ui-button-swhite .ui-dbutton-arrow {
-    width:18px;
-}
