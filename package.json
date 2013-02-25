@@ -2,15 +2,15 @@
     "name": "button-dropdown",
     "version": "1.0.0",
     "root": "alice",
-    "description": "",
+    "description": "按钮下拉菜单。",
     "homepage": "",
     "author": "",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/aliceui/button-dropdown"
     },
     "bugs": {
-        "url": ""
+        "url": "https://github.com/aliceui/button-dropdown/issues"
     },
     "license": "MIT",
     "dependencies": {
