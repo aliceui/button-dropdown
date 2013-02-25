@@ -14,9 +14,9 @@
     },
     "license": "MIT",
     "dependencies": {
-        "button": "alice/button/1.0.0/button"
+        "button": "alice/button/1.0.0/button.css"
     },
     "output": {
-        "dropdown.css": "."
+        "dropdown.css": ["button-dropdow.css", "dropdown.css"]
     }
 }
