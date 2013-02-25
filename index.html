@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>Button-dropdown - ButtonDropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="nico 0.2.3" />
+    <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/solarized.css" />
+    <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+    <script src="./static/js/arale-helper.js"></script>
+    <script src="./static/js/site.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36247332-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script>
+  (function() {
+    var data;
+    seajs._package = data = {"name":"button-dropdown","version":"1.0.0","root":"alice","description":"","homepage":"","author":"","repository":{"type":"git","url":""},"bugs":{"url":""},"license":"MIT","dependencies":{"button":"alice/button/1.0.0/button.css"},"output":{"button-dropdown.css":["button-dropdown.css","dropdown.css"]}}
+    data.dependencies && (delete data.dependencies['$'])
+    data.devDependencies && (delete data.devDependencies['$'])
+
+    seajs.config({ alias: data.dependencies })
+    seajs.config({ alias: data.devDependencies })
+    seajs.config({ alias: {} })
+
+    // for alice
+    for(var dep in data.dependencies) {
+        seajs.use(dep);
+    }
+  })();
+</script>
+    <!--[if lt IE 9]>
+    <script src="./static/js/html5shiv.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="body-wrapper">
+      <aside id="sidebar-wrapper">
+        <h1><a href="./">Button-dropdown</a><sup class="package-root"><a href="/">alice</a></sup></h1>
+        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#alice-button-dropdown" title="点击查看此组件发布情况">1.0.0</a></p>
+        <p class="description"></p>
+        <a class="source" href="" target="_blank">View the Project</a>
+      </aside>
+      <div id="content-wrapper">
+        <div id="content">
+<article class="hentry">
+  <h1 class="entry-title">ButtonDropdown</h1>
+  <div class="entry-content">
+    <p>按钮下拉菜单样式。</p>
+
+<hr/>
+<h1 id="%E6%BC%94%E7%A4%BA">演示</h1>
+<hr/>
+
+<p><link type="text/css" rel="stylesheet" media="screen" href="../src/button-dropdown.css">
+<link type="text/css" rel="stylesheet" media="screen" href="../src/dropdown.css"></p>
+
+<div class="nico-insert-code"><a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+<a class="ui-button ui-button-morange ui-dbutton ui-dbutton-orange">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+<a class="ui-button ui-button-sorange ui-dbutton ui-dbutton-orange">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+</div>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-morange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-sorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre></div>
+<div class="nico-insert-code"><a class="ui-button ui-button-lwhite ui-dbutton ui-dbutton-white">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+<a class="ui-button ui-button-mwhite ui-dbutton ui-dbutton-white">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+<a class="ui-button ui-button-swhite ui-dbutton ui-dbutton-white">
+    <span class="ui-dbutton-self">下拉菜单</span>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+</a>
+</div>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lwhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-mwhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-swhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre></div>
+<style>
+.ui-button-dropdown {
+    height: 120px;
+}
+</style>
+
+<div class="nico-insert-code"><div class="ui-button-dropdown">
+    <a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange">
+        <span class="ui-dbutton-self">下拉菜单</span>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    </a>
+    <ul class="ui-button-dropdown-large">
+        <li class="ui-button-dropdown-item">
+            <a href="#">设置代扣</a>
+        </li>
+        <li class="ui-button-dropdown-item">
+            <a href="#">标为已缴</a>
+        </li>   
+    </ul>
+</div>
+
+<div class="ui-button-dropdown">
+    <a class="ui-button ui-button-morange ui-dbutton ui-dbutton-orange">
+        <span class="ui-dbutton-self">下拉菜单</span>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    </a>
+    <ul class="ui-button-dropdown-middle">
+        <li class="ui-button-dropdown-item">
+            <a href="#">设置代扣</a>
+        </li>
+        <li class="ui-button-dropdown-item">
+            <a href="#">标为已缴</a>
+        </li>   
+    </ul>
+</div>
+
+<div class="ui-button-dropdown">
+    <a class="ui-button ui-button-sorange ui-dbutton ui-dbutton-orange">
+        <span class="ui-dbutton-self">下拉菜单</span>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    </a>
+    <ul class="ui-button-dropdown-small">
+        <li class="ui-button-dropdown-item">
+            <a href="#">设置代扣</a>
+        </li>
+        <li class="ui-button-dropdown-item">
+            <a href="#">标为已缴</a>
+        </li>   
+    </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-large"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>设置代扣<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>标为已缴<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>   
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-morange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-middle"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>设置代扣<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>标为已缴<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>   
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-sorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-small"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>设置代扣<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>标为已缴<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">li</span>&gt;</span>   
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre></div>
+  </div>
+</article>
+</div>
+      </div>
+      
+    </div>
+    <div id="footer-wrapper">
+      <footer>
+        <p class="powered">
+        <a href="http://aralejs.org">Arale</a> •
+        <a href="http://aliceui.org">Alice</a> •
+        <a href="https://github.com/spmjs/spm">spm</a> •
+        <a href="http://lab.lepture.com/nico/">nico</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

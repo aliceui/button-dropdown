@@ -1,0 +1,22 @@
+{
+    "name": "button-dropdown",
+    "version": "1.0.0",
+    "root": "alice",
+    "description": "",
+    "homepage": "",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "license": "MIT",
+    "dependencies": {
+        "button": "alice/button/1.0.0/button.css"
+    },
+    "output": {
+        "button-dropdown.css": ["button-dropdown.css", "dropdown.css"]
+    }
+}
