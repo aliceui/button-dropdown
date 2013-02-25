@@ -1,5 +1,5 @@
 {
-    "name": "dropdown",
+    "name": "button-dropdown",
     "version": "1.0.0",
     "root": "alice",
     "description": "",
@@ -17,6 +17,6 @@
         "button": "alice/button/1.0.0/button.css"
     },
     "output": {
-        "dropdown.css": ["button-dropdow.css", "dropdown.css"]
+        "button-dropdown.css": ["button-dropdown.css", "dropdown.css"]
     }
 }
