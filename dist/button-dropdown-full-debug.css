@@ -1,5 +1,5 @@
-/** alice/button/1.0.0/ui-button.css **/
 
+/** alice/button/1.0.0/button.css **/
 .ui-button * {
     margin:0;
     padding:0;
@@ -35,9 +35,6 @@ input.ui-button-text, button.ui-button-text {
     *vertical-align: top; /* for a ie7 bug */
     font-family: Hiragino Sans GB;
 }
-
-
-/** alice/button/1.0.0/ui-button-orange.css **/
 
 .ui-button-lorange,
 .ui-button-morange,
@@ -88,9 +85,6 @@ a.ui-button-sorange {
     font-size:12px;
 }
 
-
-/** alice/button/1.0.0/ui-button-white.css **/
-
 .ui-button-lwhite,
 .ui-button-mwhite,
 .ui-button-swhite {
@@ -139,16 +133,14 @@ a.ui-button-swhite {
     font-size:12px;
 }
 
-
-/** alice/button/1.0.0/ui-button-disable.css **/
-
 .ui-button-ldisable,
 .ui-button-mdisable,
 .ui-button-sdisable {
     border: none;
     background: #D4D4D4;
     cursor: text;
-    color:#fff;    
+    color:#fff;
+    text-shadow: 0 -1px 1px #aaa;    
 }
 
 a.ui-button-ldisable,
@@ -173,9 +165,6 @@ a.ui-button-sdisable {
     font-size:12px;
 }
 
-
-
-/** alice/button/1.0.0/ui-button-blue.css **/
 
 .ui-button-lblue,
 .ui-button-mblue,
