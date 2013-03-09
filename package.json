@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "root": "alice",
     "description": "按钮下拉菜单。",
+    "keywords": [
+        "按钮下拉"
+    ],
     "homepage": "",
     "author": "",
     "repository": {
