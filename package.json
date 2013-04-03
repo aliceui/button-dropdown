@@ -1,12 +1,12 @@
 {
     "name": "button-dropdown",
     "version": "1.0.0",
-    "root": "alice",
+    "family": "alice",
     "description": "按钮下拉菜单。",
     "keywords": [
         "按钮菜单"
     ],
-    "homepage": "",
+    "homepage": "http://aliceui.org/button-dropdown",
     "author": "",
     "repository": {
         "type": "git",
@@ -16,10 +16,10 @@
         "url": "https://github.com/aliceui/button-dropdown/issues"
     },
     "license": "MIT",
-    "dependencies": {
-        "button": "alice/button/1.0.0/button.css"
-    },
-    "output": {
-        "button-dropdown.css": ["button-dropdown.css", "dropdown.css"]
+    "spm": {
+        "alias": {
+            "button": "alice/button/1.0.0/button.css"
+        },
+        "output": ["button-dropdown.css"]
     }
 }
