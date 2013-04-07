@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Button-dropdown - ButtonDropdown</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="nico 0.2.3" />
+    <meta name="generator" content="nico 0.2.4" />
     <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
     <link rel="stylesheet" href="./static/css/normalize.css" />
     <link rel="stylesheet" href="./static/css/site.css" />
@@ -13,7 +13,7 @@
     <script src="./static/js/arale-helper.js"></script>
     <script src="./static/js/site.js"></script><script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36247332-1']);
+  _gaq.push(['_setAccount', 'UA-39169474-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -25,7 +25,7 @@
 <script>
   (function() {
     var data;
-    seajs._package = data = {"name":"button-dropdown","version":"1.0.0","root":"alice","description":"按钮下拉菜单。","keywords":["按钮下拉"],"homepage":"","author":"","repository":{"type":"git","url":"https://github.com/aliceui/button-dropdown"},"bugs":{"url":"https://github.com/aliceui/button-dropdown/issues"},"license":"MIT","dependencies":{"button":"alice/button/1.0.0/button.css"},"output":{"button-dropdown.css":["button-dropdown.css","dropdown.css"]}}
+    seajs._package = data = {"name":"button-dropdown","version":"1.0.0","family":"alice","description":"按钮下拉菜单。","keywords":["按钮菜单"],"homepage":"http://aliceui.org/button-dropdown","author":"","repository":{"type":"git","url":"https://github.com/aliceui/button-dropdown"},"bugs":{"url":"https://github.com/aliceui/button-dropdown/issues"},"license":"MIT","spm":{"alias":{"button":"alice/button/1.0.0/button.css"},"output":["button-dropdown.css"]}}
     data.dependencies && (delete data.dependencies['$'])
     data.devDependencies && (delete data.devDependencies['$'])
 
@@ -33,12 +33,23 @@
     seajs.config({ alias: data.devDependencies })
     seajs.config({ alias: {} })
 
-    // for alice
-    for(var dep in data.dependencies) {
-        // 如果依赖的是样式模块
-        if (data.dependencies[dep].indexOf('.css') > 0) {
-            seajs.use(dep);
+    var dependencies;
+    if (data.spm && data.spm.alias) {
+        loadCss(data.spm.alias);
+    } else {
+        loadCss(data.dependencies);
+    }
+
+    function loadCss(dependencies) {
+        // for alice
+        var array = [];    
+        for(var dep in dependencies) {
+            // 如果依赖的是样式模块
+            if (dependencies[dep].indexOf('.css') > 0) {
+                array.push("http://assets.spmjs.org/" + dependencies[dep]);
+            }
         }
+        seajs.use(array);    
     }
 
   })();
@@ -51,15 +62,15 @@
   <body>
     <div id="body-wrapper">
       <aside id="sidebar-wrapper">
-        <h1><a href="./">Button-dropdown</a><sup class="package-root"><a href="/">alice</a></sup></h1>
-        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#alice-button-dropdown" title="点击查看此组件发布情况">1.0.0</a></p>
+        <h1><a href="./">Button-dropdown</a><sup class="package-root"><a href="/"></a></sup></h1>
+        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#-button-dropdown" title="点击查看此组件发布情况">1.0.0</a></p>
         <p class="description">按钮下拉菜单。</p>
-        <p class="keywords" style="display: none;">按钮下拉</p>
+        <p class="keywords" style="display: none;">按钮菜单</p>
         <a class="source" href="https://github.com/aliceui/button-dropdown" target="_blank">View the Project</a>
 <ul id="module-output"> 
 </ul>
 <div id="output-card">
-    <h3>alice/button-dropdown/1.0.0/<a target="_blank" id="output-file"></a></h3>
+    <h3>/button-dropdown/1.0.0/<a target="_blank" id="output-file"></a></h3>
     <p>这是模块的输出文件，请 require 或 seajs.use 以上 ID 来使用本文件，具体 API 请阅读文档。</p>
 </div>
 
@@ -72,60 +83,60 @@
     <p>按钮下拉菜单样式。</p>
 
 <hr/>
-<h2 id="%E6%BC%94%E7%A4%BA">演示</h2>
+<h2 id="演示">演示</h2>
 <p><link type="text/css" rel="stylesheet" media="screen" href="src/button-dropdown.css">
 <link type="text/css" rel="stylesheet" media="screen" href="src/dropdown.css"></p>
 
 <div class="nico-insert-code"><a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 <a class="ui-button ui-button-morange ui-dbutton ui-dbutton-orange">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 <a class="ui-button ui-button-sorange ui-dbutton ui-dbutton-orange">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-morange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-sorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 </code></pre></div>
 <div class="nico-insert-code"><a class="ui-button ui-button-lwhite ui-dbutton ui-dbutton-white">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 <a class="ui-button ui-button-mwhite ui-dbutton ui-dbutton-white">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 <a class="ui-button ui-button-swhite ui-dbutton ui-dbutton-white">
     <span class="ui-dbutton-self">下拉菜单</span>
-    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+    <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
 </a>
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lwhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-mwhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-swhite ui-dbutton ui-dbutton-white"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 </code></pre></div>
 <style>
@@ -137,7 +148,7 @@
 <div class="nico-insert-code"><div class="ui-button-dropdown">
     <a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange">
         <span class="ui-dbutton-self">下拉菜单</span>
-        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
     </a>
     <ul class="ui-button-dropdown-large">
         <li class="ui-button-dropdown-item">
@@ -152,7 +163,7 @@
 <div class="ui-button-dropdown">
     <a class="ui-button ui-button-morange ui-dbutton ui-dbutton-orange">
         <span class="ui-dbutton-self">下拉菜单</span>
-        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
     </a>
     <ul class="ui-button-dropdown-middle">
         <li class="ui-button-dropdown-item">
@@ -167,7 +178,7 @@
 <div class="ui-button-dropdown">
     <a class="ui-button ui-button-sorange ui-dbutton ui-dbutton-orange">
         <span class="ui-dbutton-self">下拉菜单</span>
-        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#x00C9;</i>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
     </a>
     <ul class="ui-button-dropdown-small">
         <li class="ui-button-dropdown-item">
@@ -182,7 +193,7 @@
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-lorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-large"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
@@ -197,7 +208,7 @@
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-morange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-middle"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
@@ -212,7 +223,7 @@
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-sorange ui-dbutton ui-dbutton-orange"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-self"</span>&gt;</span>下拉菜单<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#x00C9;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"ui-dbutton-arrow iconfont"</span> <span class="attribute">title</span>=<span class="value">"下三角形"</span>&gt;</span>&amp;#xF03C;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-small"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-button-dropdown-item"</span>&gt;</span>
