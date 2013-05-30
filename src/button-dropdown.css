@@ -25,33 +25,20 @@
 
 .ui-dbutton-orange:hover {
     color: #fff;
-    border:1px solid #F67600;
-    background-color: #F5AA2B;    
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFA600), to(#FE9200));
-    background: -moz-linear-gradient(top, #FFA600, #FE9200);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA600', endColorstr='#FE9200');
-    background:-o-linear-gradient(top, #FFA600, #FE9200);
-    background: linear-gradient(top, #FFA600, #FE9200);
-    box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.4) inset;
+    background-color: #f57403;
 }
 
 .ui-dbutton-orange .ui-dbutton-self:hover,
 .ui-dbutton-orange .ui-dbutton-arrow:hover {
-    background-color: #F5AA2B;
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFB91C), to(#FFA700));
-    background: -moz-linear-gradient(top, #FFB91C, #FFA700);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFB91C', endColorstr='#FFA700');
-    background:-o-linear-gradient(top, #FFB91C, #FFA700);
-    background: linear-gradient(top, #FFB91C, #FFA700);
-    box-shadow: 0 -2px 2px rgba(255, 255, 255, 0.4) inset;
+    background-color: #fb8318;
 }
 
 .ui-dbutton-orange .ui-dbutton-self {
-    border-right: 1px solid #EF8811;
+    border-right: 1px solid #e8720b;
 }
 
 .ui-dbutton-orange .ui-dbutton-arrow {
-    border-left: 1px solid #F6B533;
+    border-left: 1px solid #fd8a27;
     color: #fff;
 }
 
@@ -88,8 +75,14 @@
 
 /* 白色 */
 
-.ui-dbutton-white .ui-dbutton-arrow:hover {    
-    color: #666;
+.ui-dbutton-white:hover {
+    background-color: #f3f3f3;
+}
+
+.ui-dbutton-white .ui-dbutton-self:hover,
+.ui-dbutton-white .ui-dbutton-arrow:hover {
+    background-color: #fcfbfb;
+    color: #666;    
 }
 
 .ui-dbutton-white .ui-dbutton-self {
@@ -100,6 +93,7 @@
     border-left: 1px solid #fff;
     color: #999;
 }
+
 
 /* 大白色按钮 */
 
