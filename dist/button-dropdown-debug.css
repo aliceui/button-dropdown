@@ -1,7 +1,7 @@
-/*! define alice/button-dropdown/1.1.0/button-dropdown-debug.css */
+/*! define alice/button-dropdown/1.1.1/button-dropdown-debug.css */
 /* alice.dropdown 样式模块 */
 
-/*! block alice/button/1.1.0/button-debug.css */
+/*! block alice/button/1.1.1/button-debug.css */
 .ui-button * {
     margin:0;
     padding:0;
@@ -42,9 +42,10 @@ input.ui-button-text, button.ui-button-text {
 .ui-button:active {
     position: relative;
     top: 1px;
+    box-shadow: 1px 1px 3px #999 inset;
 }
 
-/*! block alice/button/1.1.0/ui-button-orange-debug.css */
+/*! block alice/button/1.1.1/ui-button-orange-debug.css */
 .ui-button-lorange,
 .ui-button-morange,
 .ui-button-sorange {
@@ -102,9 +103,9 @@ a.ui-button-sorange {
     line-height:22px;
     height:22px;
 }
-/*! endblock alice/button/1.1.0/ui-button-orange-debug.css */
+/*! endblock alice/button/1.1.1/ui-button-orange-debug.css */
 
-/*! block alice/button/1.1.0/ui-button-white-debug.css */
+/*! block alice/button/1.1.1/ui-button-white-debug.css */
 .ui-button-lwhite,
 .ui-button-mwhite,
 .ui-button-swhite {
@@ -166,9 +167,9 @@ a.ui-button-swhite {
     line-height:22px;
     height:22px;
 }
-/*! endblock alice/button/1.1.0/ui-button-white-debug.css */
+/*! endblock alice/button/1.1.1/ui-button-white-debug.css */
 
-/*! block alice/button/1.1.0/ui-button-disable-debug.css */
+/*! block alice/button/1.1.1/ui-button-disable-debug.css */
 .ui-button-ldisable,
 .ui-button-mdisable,
 .ui-button-sdisable {
@@ -207,14 +208,22 @@ a.ui-button-sdisable:hover {
     font-size:12px;
 }
 
-input.ui-button-ldisable,
-input.ui-button-mdisable,
-input.ui-button-sdisable {
-    cursor: default;
+.ui-button-ldisable,
+.ui-button-mdisable,
+.ui-button-sdisable {
+    cursor: default!important;
 }
-/*! endblock alice/button/1.1.0/ui-button-disable-debug.css */
 
-/*! block alice/button/1.1.0/ui-button-blue-debug.css */
+.ui-button-ldisable:active,
+.ui-button-mdisable:active,
+.ui-button-sdisable:active {
+    position: static;
+    top: 0;
+    box-shadow: none;
+}
+/*! endblock alice/button/1.1.1/ui-button-disable-debug.css */
+
+/*! block alice/button/1.1.1/ui-button-blue-debug.css */
 .ui-button-lblue,
 .ui-button-mblue,
 .ui-button-sblue {
@@ -273,18 +282,22 @@ a.ui-button-sblue {
     line-height:22px;
     height:22px;
 }
-/*! endblock alice/button/1.1.0/ui-button-blue-debug.css */
-/*! endblock alice/button/1.1.0/button-debug.css */
+/*! endblock alice/button/1.1.1/ui-button-blue-debug.css */
+/*! endblock alice/button/1.1.1/button-debug.css */
 
 .ui-dbutton {
     padding: 0;
+}
+
+.ui-dbutton:active {
+    box-shadow: none;
 }
 
 .ui-dbutton-self,
 .ui-dbutton-arrow {
     float: left;
     font-weight: normal;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .ui-dbutton-self {
@@ -356,7 +369,7 @@ a.ui-button-sblue {
 .ui-dbutton-white .ui-dbutton-self:hover,
 .ui-dbutton-white .ui-dbutton-arrow:hover {
     background-color: #fcfbfb;
-    color: #666;    
+    color: #666;
 }
 
 .ui-dbutton-white .ui-dbutton-self {
@@ -396,10 +409,10 @@ a.ui-button-sblue {
 
 .ui-button-swhite .ui-dbutton-arrow {
     width:18px;
-    font-size: 10px;    
+    font-size: 10px;
 }
 
-/*! block alice/button-dropdown/1.1.0/dropdown-debug.css */
+/*! block alice/button-dropdown/1.1.1/dropdown-debug.css */
 .ui-button-dropdown {
     position: relative;
     display: inline-block;
@@ -449,4 +462,4 @@ a.ui-button-sblue {
     background-color: #DFE9F2;
     text-decoration:none;
 }
-/*! endblock alice/button-dropdown/1.1.0/dropdown-debug.css */
+/*! endblock alice/button-dropdown/1.1.1/dropdown-debug.css */

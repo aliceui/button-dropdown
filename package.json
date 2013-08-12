@@ -1,6 +1,6 @@
 {
     "name": "button-dropdown",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "family": "alice",
     "description": "按钮下拉菜单。",
     "keywords": [
@@ -18,7 +18,7 @@
     "license": "MIT",
     "spm": {
         "alias": {
-            "button": "alice/button/1.1.0/button.css"
+            "button": "alice/button/1.1.1/button.css"
         },
         "output": ["button-dropdown.css"]
     }

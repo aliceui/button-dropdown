@@ -6,11 +6,15 @@
     padding: 0;
 }
 
+.ui-dbutton:active {
+    box-shadow: none;
+}
+
 .ui-dbutton-self,
 .ui-dbutton-arrow {
     float: left;
     font-weight: normal;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .ui-dbutton-self {
@@ -82,7 +86,7 @@
 .ui-dbutton-white .ui-dbutton-self:hover,
 .ui-dbutton-white .ui-dbutton-arrow:hover {
     background-color: #fcfbfb;
-    color: #666;    
+    color: #666;
 }
 
 .ui-dbutton-white .ui-dbutton-self {
@@ -123,7 +127,7 @@
 
 .ui-button-swhite .ui-dbutton-arrow {
     width:18px;
-    font-size: 10px;    
+    font-size: 10px;
 }
 
 @import url("./dropdown.css");
