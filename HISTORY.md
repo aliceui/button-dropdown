@@ -2,6 +2,10 @@
 
 ---
 
+## 1.2.0
+
+`tag:improved` 依赖升级到 alice/button@1.2.0
+
 ## 1.1.1
 
 `tag:improved` 依赖升级到 alice/button@1.1.1
