@@ -1,6 +1,6 @@
 /* alice.dropdown 样式模块 */
 
-@import url("button");
+@import url("alice-button");
 
 .ui-dbutton {
     padding: 0;
