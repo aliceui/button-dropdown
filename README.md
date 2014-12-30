@@ -8,8 +8,7 @@
 
 ## 演示
 
-<link type="text/css" rel="stylesheet" media="screen" href="src/button-dropdown.css">
-<link type="text/css" rel="stylesheet" media="screen" href="src/dropdown.css">
+<link type="text/css" rel="stylesheet" media="screen" href="index.css">
 
 ````html
 <a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange">
