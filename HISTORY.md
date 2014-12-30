@@ -2,6 +2,10 @@
 
 ---
 
+## 1.3.0
+
+`tag:improved` 升级到 spm3 。
+
 ## 1.2.0
 
 `tag:improved` 依赖升级到 alice/button@1.2.0
