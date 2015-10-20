@@ -2,6 +2,10 @@
 
 ---
 
+## 1.3.1
+
+`tag:improved` 升级到 spm3.6 。
+
 ## 1.3.0
 
 `tag:improved` 升级到 spm3 。
