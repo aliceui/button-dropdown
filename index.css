@@ -1,6 +1,6 @@
 /* alice.dropdown 样式模块 */
 
-@import url("alice-iconfont");
-@import url("alice-button");
+@import url("~alice-iconfont");
+@import url("~alice-button");
 @import url("./button.css");
 @import url("./dropdown.css");
